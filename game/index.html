@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kibera Rising</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<canvas id="game" aria-label="Kibera Rising: an open-world crime story on an island that never existed"></canvas>
+<div id="hud"></div>
+<div id="pause" style="display:none"></div>
+<div id="title-overlay">
+  <div class="menu-left">
+    <div class="menu-eyebrow">AN ISLAND THAT NEVER EXISTED</div>
+    <h1 class="menu-title"><span class="menu-title-line">KIBERA</span><span class="menu-title-line">RISING</span></h1>
+    <nav class="menu-options">
+      <button class="menu-option" data-action="continue">CONTINUE</button>
+      <button class="menu-option" data-action="new">NEW GAME</button>
+      <button class="menu-option selected" data-action="load">LOAD GAME</button>
+      <button class="menu-option" data-action="settings">SETTINGS</button>
+    </nav>
+    <div class="menu-settings" id="menu-settings" style="display:none">
+      <div class="menu-settings-title">SETTINGS</div>
+      <div class="menu-settings-row"><span>Quality</span><span>SwiftShader-safe</span></div>
+      <div class="menu-settings-row"><span>Sound</span><span>Off</span></div>
+      <div class="menu-settings-row"><span>Pause</span><span>Esc</span></div>
+      <div class="menu-settings-row"><span>Switch pause tab</span><span>Q / E</span></div>
+      <div class="menu-settings-row"><span>Crew abilities</span><span>F · G · C</span></div>
+    </div>
+  </div>
+  <div class="menu-right">
+    <div class="slate">
+      <div class="slate-eyebrow">PERSONAL RECORD / LOCAL</div>
+      <div class="slate-title">KIBERA DATA-SLATE</div>
+      <div class="slate-head">
+        <span>LOAD GAME</span>
+        <span class="slate-head-right">SELECT A RECORD</span>
+      </div>
+      <div class="slot-card" data-slot="1"></div>
+      <div class="slot-card" data-slot="2"></div>
+      <div class="slot-card" data-slot="3"></div>
+      <div class="slate-foot">Save at Tony's Loft or from the pause menu</div>
+    </div>
+  </div>
+  <div class="menu-footer">An original open-world crime story on an island that never existed. Keyboard &amp; Mouse.</div>
+</div>
+<p id="status" role="status" aria-live="polite"></p>
+<script src="./vendor/three.min.js"></script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
